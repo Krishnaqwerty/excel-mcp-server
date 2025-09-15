@@ -201,8 +201,8 @@ def run_tool():
         return jsonify({"error": str(e)}), 500
 
 
-# --- Main execution ---
-if __name__ == '__main__':
-    # MCP servers must run on port 7777 inside the container
-    # Host '0.0.0.0' makes it accessible from outside the container
-    app.run(host='0.0.0.0', port=7777)
+# # --- Main execution ---
+# if __name__ == '__main__':
+#     # MCP servers must run on port 7777 inside the container
+#     # Host '0.0.0.0' makes it accessible from outside the container
+#     app.run(host='0.0.0.0', port=7777)
