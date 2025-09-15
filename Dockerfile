@@ -16,4 +16,4 @@ COPY app.py .
 EXPOSE 7777
 
 # The command to run your application when the container starts
-CMD ["python", "./app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:7777", "--workers", "4", "app:app"]
