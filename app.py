@@ -32,6 +32,12 @@ def parse_range_string(range_str):
 
 # --- MCP Endpoints ---
 
+# --- Health Check Endpoint ---
+@app.route('/healthz', methods=['GET'])
+def healthz():
+    """Simple health check endpoint."""
+    return jsonify({"status": "ok"}), 200
+
 @app.route('/mcp/info', methods=['GET'])
 def get_info():
     """
