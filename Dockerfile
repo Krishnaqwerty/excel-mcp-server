@@ -1,7 +1,7 @@
 # Use an official lightweight Python runtime as a parent image
 FROM python:3.11-slim
 
-# Set the working directory inside the container
+# Force cache bust: 2025-09-16-01
 WORKDIR /usr/src/app
 
 # Copy the dependencies file first and install them
